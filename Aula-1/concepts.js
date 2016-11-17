@@ -3,7 +3,7 @@ function greet(greet){
     console.log(greet);
 }
 
-let name = function(x, y){
+let name = function(x, y){  //'name' se torna a assinatura desta função.
     return x + y;
 }
 
@@ -32,50 +32,6 @@ list.sort();
 
 list.push([-1, 0, "oi"]);
 //1.1, 4, "Alo", Array[3]
-
-//Classes
-class Shape{
-    constructor(id){
-        this.id = id;
-    }
-
-    position(x, y){
-        this.x = x;
-        this.y = y;
-    }
-
-    getX(){
-        return this.x;
-    }
-
-    getY(){
-        return this.y;
-    }
-
-    toString(){
-        return `(${this.id})`;
-    }
-}
-
-class Rectangle extends Shape{
-    constructor(id, width, height){
-        super(id);
-        this.width = width;
-        this.height = height;
-    }
-
-    setPosition(x, y){
-        super.position(x,y);
-    }
-
-    getPosition(){
-        return '(' + super.getX() + ',' + super.getY() + ')';
-    }
-
-    getArea(){
-        return this.width * this.height;
-    }
-}
 
 //Lacos
 let listNumbers = [5, 10, 15, 20, 25, 30, 35, 110];
