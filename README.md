@@ -7,3 +7,8 @@
 3. Aula-3
  * Como utilizar as funcionalidades de um SGBD. Criar, remover, inserir, alterar e selecionar tabelas e itens.
 4. Aula-4
+ * Utilizando o KnexJs para fazer CRUD no BD.
+5. Aula-5
+ * Utilizando o ExpressJs para criar rotas.
+6. Aula-6
+ * Utilizando ...

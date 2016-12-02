@@ -1,0 +1,25 @@
+{
+  "name": "helloangular-app",
+  "version": "1.0.0",
+  "description": "Atividade para montar a primeira aplicação AngularJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "knex",
+    "express",
+    "body-parser",
+    "sqlite3",
+    "javascript"
+  ],
+  "author": "raphael4ndrade",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "knex": "^0.12.6",
+    "sqlite3": "^3.1.8"
+  }
+}

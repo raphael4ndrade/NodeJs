@@ -7,7 +7,7 @@ if(!process.argv[2]){
 }
 
 knex.raw(`insert into convidado (idconvidado, nomeconvidado) 
-    values (${process.argv[2]})`).then(function(ret){
+    values (?)`, process.argv[2]).then(function(ret){
         let i = ret.length;
         while(i--){
             console.log(ret[i]);
