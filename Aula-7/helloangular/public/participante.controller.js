@@ -8,7 +8,7 @@ angular.module("anguhello")
 
         this.listar();
 
-        this.salvarEvento = () => {
+        this.salvarParticipante = () => {
             participanteService.salvarParticipante(this.novo).then( (ret) => {
                 alert("Participante salvo com id " + ret.data.id_participante);
                 this.listar();

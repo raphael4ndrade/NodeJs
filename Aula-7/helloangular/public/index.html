@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<!-- index.html -->
+
 <html ng-app="anguhello">
     <head>
-        <title>Hello Angular!</title>
+        <title>Angular Hello, Participantes...</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     </head>
-    <body ng-controller="eventoController as ctl">
-        <h1>Eventos</h1>
-        <form ng-submit="ctl.salvarEvento()">
+    <body ng-controller="participanteController as ctl">
+        <h1>Participantes</h1>
+        <form ng-submit="ctl.salvarParticipante()">
             <fieldset>
-                <legend>Novo evento</legend>
-                <label>Data</label>
-                <input type="date" ng-model="ctl.novo.data_evento" required/> <br/>
-                <label>Descrição do evento</label>
-                <input type="text" ng-model="ctl.novo.descricao_evento" required/> <br/>
+                <legend>Novo Participante</legend>
+                <label>Nome</label>
+                <input type="text" ng-model="ctl.novo.nome_participante" required><br/>
                 <input type="submit"/>
             </fieldset>
         </form>
         <ul>
-            <li ng-repeat="ev in ctl.eventos">{{ev.data_evento | date: "yyyy/MM/dd"}} {{ev.descricao_evento}}</li>
+            <li ng-repeat="part in ctl.participantes">{{part.nome_participante}}</li>
         </ul>
-        
+
         <script type="text/javascript" src="modulo.js"></script>
-        <script type="text/javascript" src="evento.controller.js"></script>
-        <script type="text/javascript" src="evento.service.js"></script>
+        <script type="text/javascript" src="participante.controller.js"></script>
+        <script type="text/javascript" src="participante.service.js"></script>
     </body>
 </html>
