@@ -25,7 +25,7 @@ app.get("/evento/:id_evento/participante", (req, res) => {
 });
 
 app.get("/participantes/:id_participantes/eventos", (req, res) => {
-    var id = kenx("participante").select("id_participante").where({
+    var id = knex("participante").select("id_participante").where({
         id_participante : req.params.id_participante
     })
     knex("evento").select().whereIn("id_evento", id).then( (ret) => res.send(ret));

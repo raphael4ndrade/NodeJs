@@ -1,0 +1,24 @@
+{
+  "name": "hellobower",
+  "homepage": "https://github.com/raphael4ndrade/NodeJs",
+  "authors": [
+    "raphael4ndrade <raphael4ndrade@gmail.com>"
+  ],
+  "description": "criando arquivo bower.json com o comando 'bower init'",
+  "main": "",
+  "keywords": [
+    "bower",
+    "javascript"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "^1.5.9"
+  }
+}
