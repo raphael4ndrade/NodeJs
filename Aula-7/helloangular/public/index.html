@@ -3,10 +3,17 @@
     <head>
         <title>Angular Hello, Participantes...</title>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
-    <body>
-        <a href="#/eventos">Eventos</a> | <a href="#/participantes">Participantes</a><br/>
+    <body class="container well" style="min-height: 25%">
+        <div class="nav navbar-default">
+            <ul class="nav navbar">
+                <li class="col-sm-2"><a href="#/eventos">Eventos</a></li>
+                <li class="col-sm-2"><a href="#/participantes">Participantes</a></li>
+            </ul>
+        </div>
+        
         <div ng-view></div>
         
         <script type="text/javascript" src="modulo.js"></script>

@@ -1,15 +1,30 @@
 <!-- eventos.html-->
-<h1>Eventos</h1>
-<form ng-submit="ctl.salvarEvento()">
-    <fieldset>
-        <legend>Novo evento</legend>
-        <label>Data</label>
-        <input type="date" ng-model="ctl.novo.data_evento" required/> <br/>
-        <label>Descrição do evento</label>
-        <input type="text" ng-model="ctl.novo.descricao_evento" required/> <br/>
-        <input type="submit"/>
-    </fieldset>
-</form>
-<ul>
-    <li ng-repeat="ev in ctl.eventos">{{ev.data_evento | date: "yyyy/MM/dd"}} {{ev.descricao_evento}}</li>
-</ul>
+<html>
+<head>
+     <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body class="container">
+    <h1 style="font-style: italic; text-align: center"> Eventos</h1>
+    <form class="form-horizontal" ng-submit="ctl.salvarEvento()">
+            <legend><h3>Novo evento</h3></legend>
+            <label class="control-label col-sm-2">Data</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="date" ng-model="ctl.novo.data_evento" required/>
+            </div>
+            <label class="control-label col-sm-2">Descrição do evento</label>
+            <div class="col-sm-4">
+                <input class="form-control" type="text" ng-model="ctl.novo.descricao_evento" required/> <br/>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary active" type="submit">Adicionar</button>
+            </div>
+    </form>
+    <br>
+    <legend><h3>Eventos Registrados</h3></legend>
+    <ul>
+        <li ng-repeat="ev in ctl.eventos">{{ev.data_evento | date: "yyyy/MM/dd"}} {{ev.descricao_evento}}</li>
+    </ul>
+    </body>
+</html>
