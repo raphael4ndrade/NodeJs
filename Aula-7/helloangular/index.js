@@ -14,7 +14,11 @@ app.get("/participantes", (req, res) => {
 });
 
 app.get("/eventos", (req, res) => {
-    knex("evento").select().then( (ret) => res.send(ret));
+    console.log(req.body);
+    knex("evento").select().then( (ret) => {
+        
+        res.send(ret);
+    });
 });
 
 app.get("/evento/:id_evento/participante", (req, res) => {
@@ -65,6 +69,6 @@ app.post("/participante_evento", (req, res) => {
 })
 
 knex.migrate.latest().then( () => {
-    app.listen(3000);
+    app.listen(2000);
     console.log("Aplicativo online!");
 });
