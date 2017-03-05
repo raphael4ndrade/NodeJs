@@ -7,6 +7,7 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(express.static("public"));
+app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.use(bodyParser.json());
 
 app.get("/participantes", (req, res) => {
