@@ -1,10 +1,10 @@
 {
-  "name": "hello-express",
+  "name": "hello-chai-http",
   "version": "1.0.0",
-  "description": "Aula-5: Iniciando o uso de ExpressJs.",
+  "description": "Aula-5: Iniciando o uso de ExpressJs. Nesse módulo vamos aprender a testar a aplicação!",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./test/*.js"
   },
   "keywords": [
     "javascript",
@@ -14,9 +14,7 @@
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.16.1",
-    "express": "^4.14.0",
-    "knex": "^0.12.6",
-    "sqlite3": "^3.1.8"
+    "express": "^4.14.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",

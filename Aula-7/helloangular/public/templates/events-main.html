@@ -1,0 +1,30 @@
+<h1> EVENTOS </h1>
+<fieldset>
+    <legend>
+        <h3> ADICIONAR NOVO </h3>
+    </legend>
+    <form ng-submit="ctl.salvarEvento()">
+        <label>Data</label>
+        <div>
+            <input ng-model="ctl.novo.data_evento" required/>
+        </div>
+        <label>Descrição do evento</label>
+        <div>
+            <input type="text" ng-model="ctl.novo.descricao_evento" required/> <br/>
+        </div>
+        <div>
+            <button type="submit">Adicionar</button>
+        </div>
+    </form>
+</fieldset>
+<br>
+<fieldset>
+    <legend>
+        <h3> JÁ REGISTRADOS </h3>
+    </legend>
+    <ul>
+        <li ng-repeat="ev in ctl.listEvents">{{ev.data_evento | date: "yyyy/MM/dd"}} {{ev.descricao_evento}}
+            <a href="#/eventos/{{ev.id_evento}}/participantes" ng-click="clt.buscarParticipantes()"> Veja quem vai! </button>
+        </li>
+    </ul>
+</fieldset>

@@ -1,0 +1,18 @@
+<!--participantes.html-->
+<h1> PARTICIPANTES </h1>
+<fieldset>
+    <legend><h3> ADICIONAR NOVO </h3></legend>
+    <form ng-submit="ctl.salvarParticipante()">
+        <label>Nome  <input type="text" ng-model="ctl.novo.nome_participante" required><br/></label>
+        <button type="submit">Adicionar</button>
+    </form>
+</fieldset>
+<br>
+<fieldset>
+    <legend><h3> JÁ REGISTRADOS </h3></legend>
+    <ul>
+        <li ng-repeat="part in ctl.participantes">{{part.nome_participante}}
+            <a href="#participantes/{{part.id_participante}}/eventos" ng-click="ctl.buscarEventos()"> eventos relacionados!</a>
+        </li>
+    </ul>
+</fieldset>

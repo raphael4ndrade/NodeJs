@@ -10,6 +10,7 @@ app.use(express.static("public"));
 app.use('/scripts', express.static(__dirname + '/node_modules/'));
 app.use(bodyParser.json());
 
+// GETting all
 app.get("/participantes", (req, res) => {
     knex("participante").select().then( (ret) => res.send(ret));
 });
@@ -18,7 +19,8 @@ app.get("/eventos", (req, res) => {
     knex("evento").select().then( (ret) => res.send(ret));
 });
 
-app.get("/evento/:id_evento/participante", (req, res) => {
+// 
+app.get("/eventos/:id_evento/participante", (req, res) => {
     var id = knex("evento").select(id_evento).where({
         id_evento: req.params.id_evento
     });
@@ -32,6 +34,8 @@ app.get("/participantes/:id_participantes/eventos", (req, res) => {
     knex("evento").select().whereIn("id_evento", id).then( (ret) => res.send(ret));
 });
 
+
+// POST
 app.post("/evento", (req, res) => {
     var novo = req.body;
     knex("evento").insert(novo, "id_evento").then( (ret) => {
@@ -66,6 +70,6 @@ app.post("/participante_evento", (req, res) => {
 })
 
 knex.migrate.latest().then( () => {
-    app.listen(3000);
+    app.listen(2000);
     console.log("Aplicativo online!");
 });

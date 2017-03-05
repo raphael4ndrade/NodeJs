@@ -10,7 +10,6 @@ angular.module("anguhello")
 
         this.salvarParticipante = () => {
             participanteService.salvarParticipante(this.novo).then( (ret) => {
-                alert("Participante salvo com id " + ret.data.id_participante);
                 this.listar();
                 this.novo = {};
             });

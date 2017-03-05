@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html ng-app="anguhello">
+<<<<<<< HEAD
 
 <head>
     <title>Angular Hello, Participantes...</title>
@@ -22,5 +23,28 @@
 <script type="text/javascript" src="participantes/participante.service.js"></script>
 <script type="text/javascript" src="eventos/evento.controller.js"></script>
 <script type="text/javascript" src="eventos/evento.service.js"></script>
+=======
+<head>
+    <title>Angular Hello, Participantes...</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="#/eventos">Eventos</a></li>
+            <li><a href="#/participantes">Participantes</a></li>
+        </ul>
+    </div>
+
+    <div ng-view></div>
+
+    <script type="text/javascript" src="modulo.js"></script>
+    <script type="text/javascript" src="participante.controller.js"></script>
+    <script type="text/javascript" src="participante.service.js"></script>
+    <script type="text/javascript" src="evento.controller.js"></script>
+    <script type="text/javascript" src="evento.service.js"></script>
+</body>
+>>>>>>> b955af53f4d18df92e6f5745743ccd477337f933
 
 </html>
